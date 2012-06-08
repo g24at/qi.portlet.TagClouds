@@ -19,6 +19,8 @@ class SubjectsVocabulary(object):
         catalog = getToolByName(context, 'portal_catalog')
         subjects = list(catalog.uniqueValuesFor('Subject'))
         subjects.sort()
+        subjects = [subject.encode('utf-8') for subject in subjects]
+        #import pdb; pdb.set_trace()
         terms = [SimpleTerm(value=k, token=base64.b64encode(k), title=k)
                  for k in subjects]
         return SimpleVocabulary(terms)
