@@ -25,5 +25,4 @@ class SubjectsVocabulary(object):
                  for k in subjects]
         return SimpleVocabulary(terms)
 
-
 SubjectsVocabularyFactory = SubjectsVocabulary()

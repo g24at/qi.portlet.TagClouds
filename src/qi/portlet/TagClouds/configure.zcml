@@ -34,4 +34,15 @@
          editview=".tagcloudportlet.EditForm"
          />
 
+     <plone:portlet
+         name="qi.portlet.TagClouds.UserCloudPortlet"
+         interface=".usercloudportlet.IUserCloudPortlet"
+         assignment=".usercloudportlet.Assignment"
+         view_permission="zope2.View"
+         edit_permission="cmf.ManagePortal"
+         renderer=".usercloudportlet.Renderer"
+         addview=".usercloudportlet.AddForm"
+         editview=".usercloudportlet.EditForm"
+         />
+
 </configure>
