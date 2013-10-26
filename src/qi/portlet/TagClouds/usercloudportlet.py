@@ -116,7 +116,7 @@ class Renderer(base.Renderer):
             d["text"] = tag
             d["class"] = "cloud" + str(size)
             href= self.portal_url + \
-                "/posts?users="+url_quote(tag)
+                "/?user="+url_quote(tag)
             d["href"]=href
             d["count"] = translate(
                 _(u'${count} items', mapping={'count': tagOccs[tag]}),
